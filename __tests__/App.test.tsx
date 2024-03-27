@@ -33,4 +33,10 @@ describe('App', () => {
     const textComponent = getByText('App');
     expect(textComponent).toBeDefined();
   });
+
+  test('renders Text component with "App" text', () => {
+    const { getByText } = render(<App />);
+    const textComponent = getByText('Child');
+    expect(textComponent).toBeDefined();
+  });
 });
